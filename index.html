@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111311">
+  <title>Arquivo Interno — Museu da Loucura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="seal" href="#" aria-label="Museu da Loucura">M<span>∴</span>L</a>
+    <div class="top-meta"><span>REDE INTERNA</span><span class="live-dot"></span><span>TERMINAL 04</span></div>
+  </header>
+
+  <main>
+    <section id="login-screen" class="login-screen">
+      <div class="classification">ACESSO RESTRITO · NÍVEL 04</div>
+      <p class="eyebrow">MUSEU DA LOUCURA / ARQUIVO CENTRAL</p>
+      <h1>O que foi<br><em>esquecido</em> não morreu.</h1>
+      <p class="intro">Este terminal contém documentos internos retirados do acervo público. Identifique a credencial de acesso para continuar.</p>
+      <div class="terminal">
+        <div class="terminal-head"><span>AUTH.SYS</span><span>BUILD 04.17</span></div>
+        <label for="password">CHAVE DE ACESSO</label>
+        <div class="input-row">
+          <span class="prompt">&gt;_</span>
+          <input id="password" type="text" autocomplete="off" spellcheck="false" placeholder="insira a chave..." aria-describedby="hint">
+          <button id="submit-password" type="button">ENTRAR ↗</button>
+        </div>
+        <p id="hint" class="hint">DICA DO SISTEMA: triângulo.</p>
+        <p id="login-message" class="login-message" role="status"></p>
+      </div>
+      <p class="footnote">AVISO: toda atividade neste terminal é registrada.</p>
+    </section>
+
+    <section id="archive-screen" class="archive-screen hidden">
+      <div class="archive-banner"><span>ACESSO CONCEDIDO</span><span>S.O.E. // 1958–1974</span></div>
+      <div class="archive-heading">
+        <div><p class="eyebrow">MUSEU DA LOUCURA · DOCUMENTAÇÃO INTERNA</p><h1>Arquivo <em>restrito</em></h1></div>
+        <button id="logout" class="quiet-button">ENCERRAR SESSÃO ×</button>
+      </div>
+      <p class="archive-lead">Quatro prontuários da Série de Observação Especial e correspondência interna recuperada.</p>
+      <div class="notice"><span class="notice-mark">!</span><p><strong>NOTA DO ARQUIVISTA</strong><br>Se você não reconhece os nomes listados, não tente procurar os registros originais. Eles não constam mais no catálogo. Os nomes abaixo foram excluídos. (Última atualzação 10 de Setembro de 2026)</p></div>
+
+      <div class="section-label"><span>01 / PRONTUÁRIOS</span><span>4 REGISTROS</span></div>
+      <div class="file-grid">
+        <button class="file-card" data-doc="patient-07"><span class="file-type">PRONTUÁRIO MÉDICO</span><span class="file-id">S.O.E. Nº 07</span><strong>Beatriz Dorta</strong><span class="file-desc">Admissão: 19/01/1972 · Ala isolada</span><span class="file-open">ABRIR ARQUIVO ↗</span></button>
+        <button class="file-card" data-doc="patient-22"><span class="file-type">PRONTUÁRIO MÉDICO</span><span class="file-id">S.O.E. Nº 22</span><strong>Jhonata Eloy</strong><span class="file-desc">Admissão: 04/07/1966 · Ala isolada</span><span class="file-open">ABRIR ARQUIVO ↗</span></button>
+        <button class="file-card" data-doc="patient-13"><span class="file-type">PRONTUÁRIO MÉDICO</span><span class="file-id">S.O.E. Nº 13</span><strong>Mag Mattia</strong><span class="file-desc">Admissão: 03/02/1969 · Desenhos nas paredes</span><span class="file-open">ABRIR ARQUIVO ↗</span></button>
+        <button class="file-card" data-doc="patient-29"><span class="file-type">PRONTUÁRIO MÉDICO</span><span class="file-id">S.O.E. Nº 29</span><strong>Tomas Krajnovic</strong><span class="file-desc">Admissão: 05/12/1958 · Sem intérprete</span><span class="file-open">ABRIR ARQUIVO ↗</span></button>
+      </div>
+
+      <div class="section-label"><span>02 / CORRESPONDÊNCIA</span><span>3 MENSAGENS RECUPERADAS</span></div>
+      <div class="email-list">
+        <button class="email-row" data-doc="email-01"><span class="mail-icon">✉</span><span class="email-main"><strong>De: Dra. Helena Vilar</strong><small>Para: Direção Administrativa</small></span><span class="email-subject">A respeito das espirais no corredor leste</span><span class="email-date">22.11.1972</span><span>↗</span></button>
+        <button class="email-row" data-doc="email-02"><span class="mail-icon">✉</span><span class="email-main"><strong>De: Álvaro Mendes</strong><small>Para: Equipe de Segurança</small></span><span class="email-subject">Os toques na ala masculina</span><span class="email-date">03.02.1973</span><span>↗</span></button>
+        <button class="email-row" data-doc="email-03"><span class="mail-icon">✉</span><span class="email-main"><strong>De: remetente removido</strong><small>Para: [DADOS SUPRIMIDOS]</small></span><span class="email-subject">A ordem exige que o desenho seja concluído.</span><span class="email-date">04.02.1973</span><span>↗</span></button>
+      </div>
+      <footer class="archive-footer"><span>MUSEU DA LOUCURA © — CÓPIA LOCAL RECUPERADA</span><span>SE HOUVER ERRO, NÃO ATUALIZE A PÁGINA.</span></footer>
+    </section>
+  </main>
+
+  <div id="document-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <article class="document-window">
+      <div class="document-top"><span id="modal-category">DOCUMENTO RECUPERADO</span><button id="close-modal" aria-label="Fechar documento">×</button></div>
+      <div class="document-content"><p id="modal-ref" class="doc-ref"></p><h2 id="modal-title"></h2><div id="modal-body" class="doc-body"></div><p id="modal-stamp" class="doc-stamp">CÓPIA DIGITAL · INTEGRIDADE NÃO VERIFICADA</p></div>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
